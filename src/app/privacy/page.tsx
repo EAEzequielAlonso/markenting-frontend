@@ -129,7 +129,7 @@ export default function PrivacyPage() {
                         <p className="text-muted-foreground">
                             Si tienes preguntas sobre esta política o el manejo de tus datos, contáctanos en:{" "}
                             <a href="mailto:privacy@advantage-ai.com" className="text-primary hover:underline font-medium">
-                                privacy@advantage-ai.com
+                                phyessoft@gmail.com
                             </a>
                         </p>
                     </section>
