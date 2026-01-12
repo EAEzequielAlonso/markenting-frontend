@@ -510,7 +510,7 @@ export default function LandingPage() {
           <div className="space-y-4">
             <h4 className="font-bold">Legales</h4>
             <nav className="flex flex-col gap-2">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Privacidad</Link>
+              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">Privacidad</Link>
               <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Términos</Link>
               <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Cookies</Link>
             </nav>
