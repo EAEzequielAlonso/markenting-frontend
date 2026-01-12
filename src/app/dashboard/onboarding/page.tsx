@@ -4,7 +4,7 @@ import * as React from "react"
 import { useRouter } from "next/navigation"
 import axios from "axios"
 import { Check, ChevronRight, Store, Target, Share2, Loader2, MapPin, DollarSign, MessageSquare } from "lucide-react"
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import { FacebookLoginButton } from "@/components/ui/facebook-login-button"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -281,24 +281,17 @@ export default function OnboardingPage() {
                                             Conecta tu cuenta de publicidad de Meta para comenzar.
                                         </p>
                                     </div>
-                                    <FacebookLogin
+                                    <FacebookLoginButton
                                         appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || ""}
-                                        autoLoad={false}
-                                        fields="name,email,picture"
-                                        callback={(response: any) => {
+                                        onSuccess={(response: any) => {
                                             if (response.accessToken) {
                                                 setFormData({ ...formData, metaToken: response.accessToken })
                                             }
                                         }}
-                                        render={(renderProps: any) => (
-                                            <Button
-                                                variant={formData.metaToken ? "secondary" : "outline"}
-                                                onClick={renderProps.onClick}
-                                            >
-                                                {formData.metaToken ? "¡Cuenta Conectada! ✅" : "Conectar Cuenta con Facebook"}
-                                            </Button>
-                                        )}
-                                    />
+                                        variant={formData.metaToken ? "secondary" : "outline"}
+                                    >
+                                        {formData.metaToken ? "¡Cuenta Conectada! ✅" : "Conectar Cuenta con Facebook"}
+                                    </FacebookLoginButton>
                                 </CardContent>
                             </Card>
                         </div>
