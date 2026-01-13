@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
 import {
     LayoutDashboard,
@@ -99,8 +100,10 @@ export default function DashboardLayout({
             {/* Sidebar */}
             <aside className="fixed inset-y-0 left-0 z-10 hidden w-64 flex-col border-r bg-background sm:flex">
                 <div className="flex h-16 items-center px-6 border-b">
-                    <Store className="h-6 w-6 text-primary mr-2" />
-                    <span className="font-bold text-lg">SaaS Marketing AI</span>
+                    <div className="relative h-8 w-8 mr-3 rounded-md overflow-hidden">
+                        <Image src="/logo.jpeg" alt="Logo" fill className="object-cover" />
+                    </div>
+                    <span className="font-bold text-lg">AdVantage AI</span>
                 </div>
                 <nav className="flex-1 flex flex-col gap-1 p-4">
                     {sidebarItems.map((item) => {

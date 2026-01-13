@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Cookie, Settings, ShieldCheck, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,6 +10,9 @@ export default function CookiesPage() {
             <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-10">
                 <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2 font-bold text-xl tracking-tight">
+                        <div className="relative h-8 w-8 rounded-md overflow-hidden">
+                            <Image src="/logo.jpeg" alt="Logo" fill className="object-cover" />
+                        </div>
                         <span>AdVantage AI</span>
                     </Link>
                     <Link href="/">

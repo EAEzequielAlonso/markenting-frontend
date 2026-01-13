@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   CheckCircle2,
@@ -31,9 +32,9 @@ export default function LandingPage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground selection:bg-primary/30">
       {/* 1️⃣ HEADER / NAVBAR */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md px-6 h-16 flex items-center">
-        <div className="flex items-center gap-2 font-bold text-xl tracking-tight">
-          <div className="p-1 bg-primary rounded-lg">
-            <Sparkles className="h-6 w-6 text-primary-foreground" />
+        <div className="flex items-center gap-3 font-bold text-xl tracking-tight">
+          <div className="relative h-10 w-10 rounded-xl overflow-hidden shadow-sm">
+            <Image src="/logo.jpeg" alt="AdVantage AI Logo" fill className="object-cover" />
           </div>
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
             AdVantage AI
@@ -490,8 +491,10 @@ export default function LandingPage() {
       <footer className="w-full py-12 px-6 border-t bg-background">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2 font-bold text-xl tracking-tight">
-              <Sparkles className="h-6 w-6 text-primary" />
+            <div className="flex items-center gap-3 font-bold text-xl tracking-tight">
+              <div className="relative h-8 w-8 rounded-lg overflow-hidden grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all">
+                <Image src="/logo.jpeg" alt="AdVantage AI" fill className="object-cover" />
+              </div>
               <span>AdVantage AI</span>
             </div>
             <p className="text-muted-foreground max-w-xs leading-relaxed">
