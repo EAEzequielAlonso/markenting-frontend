@@ -123,12 +123,33 @@ export default function PrivacyPage() {
                         </p>
                     </section>
 
+                    {/* Sección 6 - Solicitud de Eliminación (Requerido por Facebook) */}
+                    <section className="space-y-4">
+                        <div className="flex items-center gap-3 mb-2">
+                            <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                                <Shield className="h-6 w-6" />
+                            </div>
+                            <h2 className="text-2xl font-bold">6. Instrucciones de Eliminación de Datos</h2>
+                        </div>
+                        <div className="prose prose-slate dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+                            <p>
+                                Cumpliendo con los requisitos de la Plataforma de Facebook y el RGPD, ofrecemos un mecanismo claro para que solicites la eliminación de tus datos:
+                            </p>
+                            <ol className="list-decimal pl-6 space-y-2 mt-4">
+                                <li>Envía un correo electrónico a <strong>phyessoft@gmail.com</strong> con el asunto: <em>"Solicitud de Eliminación de Datos"</em>.</li>
+                                <li>Indica claramente en el cuerpo del mensaje el correo electrónico asociado a tu cuenta en AdVantage AI.</li>
+                                <li>Nuestro equipo de soporte procesará tu solicitud, eliminando tu cuenta y todos los datos asociados (incluyendo tokens de acceso y contenido) de nuestros servidores en un plazo máximo de 30 días.</li>
+                                <li>Recibirás una notificación de confirmación una vez que el proceso haya finalizado.</li>
+                            </ol>
+                        </div>
+                    </section>
+
                     {/* Contacto */}
                     <section className="mt-12 pt-8 border-t">
                         <h3 className="text-xl font-bold mb-4">¿Tienes dudas?</h3>
                         <p className="text-muted-foreground">
-                            Si tienes preguntas sobre esta política o el manejo de tus datos, contáctanos en:{" "}
-                            <a href="mailto:privacy@advantage-ai.com" className="text-primary hover:underline font-medium">
+                            Si tienes preguntas sobre esta política o necesitas asistencia con tus datos, contáctanos en:{" "}
+                            <a href="mailto:phyessoft@gmail.com" className="text-primary hover:underline font-medium">
                                 phyessoft@gmail.com
                             </a>
                         </p>

@@ -501,18 +501,18 @@ export default function LandingPage() {
           <div className="space-y-4">
             <h4 className="font-bold">Producto</h4>
             <nav className="flex flex-col gap-2">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Funciones</Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Integraciones</Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Precios</Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Roadmap</Link>
+              <Link href="#automatizacion" className="text-sm text-muted-foreground hover:text-primary">Funciones</Link>
+              <Link href="#integraciones" className="text-sm text-muted-foreground hover:text-primary">Integraciones</Link>
+              <Link href="#precios" className="text-sm text-muted-foreground hover:text-primary">Precios</Link>
+              <Link href="/roadmap" className="text-sm text-muted-foreground hover:text-primary">Roadmap</Link>
             </nav>
           </div>
           <div className="space-y-4">
             <h4 className="font-bold">Legales</h4>
             <nav className="flex flex-col gap-2">
               <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">Privacidad</Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Términos</Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Cookies</Link>
+              <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary">Términos</Link>
+              <Link href="/cookies" className="text-sm text-muted-foreground hover:text-primary">Cookies</Link>
             </nav>
           </div>
         </div>
