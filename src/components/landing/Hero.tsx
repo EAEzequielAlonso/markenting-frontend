@@ -1,73 +1,58 @@
-'use client';
-
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ChevronRight, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function Hero() {
     return (
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center justify-center">
+        <section className="relative pt-32 pb-20 px-6 overflow-hidden min-h-screen flex items-center justify-center bg-[#0f172a] text-white">
             {/* Background Light Effects */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[100px] animate-pulse"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
+                <div className="absolute top-[-10%] right-[-10%] w-[70%] h-[70%] bg-[#7f1d1d]/20 rounded-full blur-[120px] animate-pulse"></div>
+                <div className="absolute bottom-[-10%] left-[-10%] w-[70%] h-[70%] bg-[#fbbf24]/5 rounded-full blur-[120px] animate-pulse delay-1000"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto text-center space-y-8 z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-1.5 rounded-full shadow-sm mb-4 hover:border-accent/50 transition-colors cursor-default"
-                >
-                    <span className="flex h-2 w-2 rounded-full bg-accent animate-ping absolute inline-flex opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wider pl-2">La herramienta N°1 para Iglesias en 2026</span>
-                </motion.div>
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 z-10">
+                <div className="flex-1 text-center lg:text-left space-y-8">
+                    <div className="animate-fade-in-up inline-flex items-center space-x-2 bg-white/5 border border-white/10 backdrop-blur-sm px-5 py-2 rounded-full shadow-2xl mb-4 hover:border-[#fbbf24]/30 transition-all">
+                        <span className="flex h-2 w-2 rounded-full bg-[#fbbf24] animate-ping absolute inline-flex opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#fbbf24]"></span>
+                        <span className="text-[10px] font-black text-[#fbbf24] uppercase tracking-[0.3em] pl-2">Plataforma Líder de Gestión Eclesiástica</span>
+                    </div>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.2 }}
-                    className="text-5xl md:text-7xl font-black tracking-tight text-slate-900 leading-[1.1]"
-                >
-                    Gestión Ministerial que<br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-900">Transforma Generaciones</span>
-                </motion.h1>
+                    <h1 className="animate-fade-in-up delay-200 text-6xl md:text-8xl font-black tracking-tighter leading-[0.95]">
+                        Tu Visión,<br />
+                        <span className="text-[#fbbf24]">Elevada.</span>
+                    </h1>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.4 }}
-                    className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
-                >
-                    Ecclesia SaaS centraliza miembros, finanzas y planificación en una plataforma simple, segura y diseñada para el crecimiento del Reino.
-                </motion.p>
+                    <p className="animate-fade-in-up delay-400 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                        Administra tu congregación con la excelencia que el Reino merece. Una herramienta diseñada por y para el ministerio moderno.
+                    </p>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-8"
-                >
-                    <Link href="/register" className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-900 transition shadow-xl shadow-primary/25 flex items-center justify-center group">
-                        Prueba Gratis 14 Días
-                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition" />
-                    </Link>
-                    <Link href="#precios" className="w-full sm:w-auto bg-white text-slate-700 px-8 py-4 rounded-full font-bold text-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-center hover:shadow-lg">
-                        Ver Planes
-                    </Link>
-                </motion.div>
+                    <div className="animate-fade-in-up delay-600 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
+                        <Link href="/register" className="w-full sm:w-auto bg-[#fbbf24] text-[#0f172a] px-10 py-5 rounded-[2rem] font-black text-xl hover:bg-white transition-all shadow-2xl shadow-black/20 flex items-center justify-center group transform hover:-translate-y-1 uppercase tracking-widest">
+                            Empezar ahora
+                            <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition" />
+                        </Link>
+                        <Link href="#precios" className="w-full sm:w-auto bg-transparent text-white px-10 py-5 rounded-[2rem] font-bold text-xl border-2 border-white/10 hover:border-[#fbbf24]/50 hover:bg-white/5 transition flex items-center justify-center transform hover:-translate-y-1 uppercase tracking-widest">
+                            Explorar Planes
+                        </Link>
+                    </div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1 }}
-                    className="pt-8 flex items-center justify-center space-x-6 text-sm font-medium text-slate-500"
-                >
-                    <div className="flex items-center"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Sin tarjeta de crédito</div>
-                    <div className="flex items-center"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Cancelación en cualquier momento</div>
-                </motion.div>
+                    <div className="animate-fade-in-up delay-800 flex items-center justify-center lg:justify-start space-x-8 text-xs font-black text-slate-400 uppercase tracking-widest">
+                        <div className="flex items-center"><CheckCircle2 className="w-4 h-4 text-[#fbbf24] mr-2" /> 100% Seguro</div>
+                        <div className="flex items-center"><CheckCircle2 className="w-4 h-4 text-[#fbbf24] mr-2" /> Soporte Pastoral</div>
+                    </div>
+                </div>
+
+                <div className="flex-1 relative animate-fade-in-up delay-400 w-full max-w-2xl">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-[#7f1d1d] to-[#fbbf24] rounded-[3rem] blur-2xl opacity-20 animate-pulse"></div>
+                    <div className="relative bg-[#0f172a] border-4 border-white/5 rounded-[2.5rem] overflow-hidden shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] p-2 group">
+                        <img
+                            src="/images/hero_dashboard.png"
+                            alt="Ecclesia Dashboard"
+                            className="w-full h-auto rounded-[2rem] transform transition-transform duration-1000 group-hover:scale-[1.05]"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );

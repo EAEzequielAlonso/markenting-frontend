@@ -17,40 +17,40 @@ export default function Navbar() {
     }, []);
 
     const navClasses = cn(
-        'fixed top-0 w-full z-50 transition-all duration-300 border-b',
+        'fixed top-0 w-full z-50 transition-all duration-500 border-b',
         scrolled
-            ? 'bg-white/90 backdrop-blur-md border-slate-200 py-3 shadow-sm'
-            : 'bg-transparent border-transparent py-5'
+            ? 'bg-[#7f1d1d] border-white/10 py-3 shadow-2xl'
+            : 'bg-transparent border-transparent py-6'
     );
 
     return (
         <header className={navClasses}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
-                <Link href="/" className="flex items-center space-x-2 group">
-                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-red-900 rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
-                        <span className="text-white font-bold text-xl">E</span>
+                <Link href="/" className="flex items-center space-x-3 group">
+                    <div className="w-11 h-11 bg-gradient-to-br from-primary to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:rotate-6 transition-all duration-500 border border-white/20">
+                        <span className="text-white font-black text-2xl tracking-tighter">E</span>
                     </div>
-                    <span className={cn("text-2xl font-bold tracking-tight transition-colors", scrolled ? "text-slate-900" : "text-slate-900")}>
-                        Ecclesia<span className="text-primary italic">SaaS</span>
+                    <span className="text-2xl font-black tracking-tighter text-white">
+                        Ecclesia<span className="text-[#fbbf24] italic">SaaS</span>
                     </span>
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center space-x-8">
-                    <Link href="#funciones" className="text-sm font-medium text-slate-600 hover:text-primary transition">Funciones</Link>
-                    <Link href="#precios" className="text-sm font-medium text-slate-600 hover:text-primary transition">Precios</Link>
-                    <Link href="#testimonios" className="text-sm font-medium text-slate-600 hover:text-primary transition">Testimonios</Link>
+                <nav className="hidden md:flex items-center space-x-10">
+                    <Link href="#funciones" className="text-sm font-black text-white/80 hover:text-[#fbbf24] transition-colors tracking-widest uppercase">Funciones</Link>
+                    <Link href="#precios" className="text-sm font-black text-white/80 hover:text-[#fbbf24] transition-colors tracking-widest uppercase">Precios</Link>
+                    <Link href="#testimonios" className="text-sm font-black text-white/80 hover:text-[#fbbf24] transition-colors tracking-widest uppercase">Testimonios</Link>
                 </nav>
 
                 {/* Desktop CTA */}
-                <div className="hidden md:flex items-center space-x-4">
-                    <Link href="/login" className="text-sm font-semibold text-slate-700 hover:text-primary transition">
-                        Iniciar Sesión
+                <div className="hidden md:flex items-center space-x-6">
+                    <Link href="/login" className="text-sm font-black text-white hover:text-[#fbbf24] transition-colors tracking-widest uppercase">
+                        Ingresar
                     </Link>
                     <Link
                         href="/register"
-                        className="bg-primary text-white px-5 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition shadow-lg shadow-primary/30 active:scale-95 hover:bg-red-900"
+                        className="bg-[#fbbf24] text-[#7f1d1d] px-8 py-3 rounded-2xl font-black text-sm hover:bg-white transition-all shadow-xl shadow-black/20 active:scale-95 uppercase tracking-widest"
                     >
                         Prueba Gratis
                     </Link>
@@ -82,10 +82,10 @@ export default function Navbar() {
                             <Link href="/login" className="text-lg font-medium text-slate-700" onClick={() => setMobileMenuOpen(false)}>Iniciar Sesión</Link>
                             <Link
                                 href="/register"
-                                className="bg-primary text-white text-center py-3 rounded-xl font-bold shadow-lg shadow-primary/20"
+                                className="bg-[#fbbf24] text-[#7f1d1d] text-center py-4 rounded-2xl font-black shadow-xl shadow-black/20 uppercase tracking-widest text-sm"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
-                                Comenzar Prueba Gratis
+                                Prueba Gratis
                             </Link>
                         </nav>
                     </motion.div>

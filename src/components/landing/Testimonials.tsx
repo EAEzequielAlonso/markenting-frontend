@@ -26,30 +26,33 @@ export default function Testimonials() {
     ];
 
     return (
-        <section id="testimonios" className="py-24 px-6 bg-slate-50 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-accent font-bold uppercase tracking-widest text-sm">Testimonios</h2>
-                    <h3 className="text-4xl font-bold text-slate-900">Lo que dicen los Pastores</h3>
+        <section id="testimonios" className="py-32 px-6 bg-[#0f172a] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#7f1d1d]/10 to-transparent pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <div className="text-center mb-20 space-y-6">
+                    <h2 className="text-[#fbbf24] font-black uppercase tracking-[0.3em] text-xs">Testimonios Reales</h2>
+                    <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none">Voces del Ministerio</h3>
+                    <div className="w-24 h-1.5 bg-[#7f1d1d] mx-auto rounded-full"></div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-10">
                     {testimonials.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col"
+                            className="bg-white/5 border border-white/10 p-10 rounded-[3rem] flex flex-col hover:border-[#fbbf24]/50 transition-all duration-500 shadow-2xl group"
                         >
-                            <Quote className="w-10 h-10 text-primary/20 mb-6" />
-                            <p className="text-slate-700 italic text-lg mb-6 flex-grow">"{item.quote}"</p>
-                            <div className="flex items-center space-x-4">
-                                <img src={item.image} alt={item.author} className="w-12 h-12 rounded-full border-2 border-primary/20" />
+                            <Quote className="w-12 h-12 text-[#fbbf24]/20 mb-8 group-hover:text-[#fbbf24]/40 transition-colors" />
+                            <p className="text-slate-300 italic text-xl mb-10 flex-grow leading-relaxed font-medium">"{item.quote}"</p>
+                            <div className="flex items-center space-x-5 border-t border-white/5 pt-8">
+                                <img src={item.image} alt={item.author} className="w-14 h-14 rounded-2xl border-2 border-[#fbbf24]/30 object-cover shadow-2xl" />
                                 <div>
-                                    <h5 className="font-bold text-slate-900">{item.author}</h5>
-                                    <span className="text-sm text-slate-500">{item.role}</span>
+                                    <h5 className="font-black text-white tracking-tight uppercase text-sm">{item.author}</h5>
+                                    <span className="text-[10px] text-[#fbbf24] font-black uppercase tracking-widest">{item.role}</span>
                                 </div>
                             </div>
                         </motion.div>

@@ -2,44 +2,45 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-900 text-slate-400 py-16 px-6 relative overflow-hidden">
+        <footer className="bg-[#0f172a] text-slate-400 py-20 px-6 relative overflow-hidden border-t border-white/10">
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#7f1d1d]/10 rounded-full blur-[120px] pointer-events-none"></div>
+
             <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 relative z-10">
-                <div className="col-span-2 space-y-6">
-                    <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold">E</span>
+                <div className="col-span-2 space-y-8">
+                    <div className="flex items-center space-x-3 group">
+                        <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl border border-white/20">
+                            <span className="text-white font-black text-2xl">E</span>
                         </div>
-                        <span className="text-xl font-bold text-white">Ecclesia SaaS</span>
+                        <span className="text-3xl font-black text-white tracking-tighter">Ecclesia<span className="text-[#fbbf24] italic">SaaS</span></span>
                     </div>
-                    <p className="max-w-sm text-sm leading-relaxed">
-                        Nuestra misión es equipar a la iglesia con tecnología de excelencia para administrar los recursos del Reino con sabiduría y eficiencia.
+                    <p className="max-w-md text-base leading-relaxed text-slate-300 font-medium">
+                        Equipando a la Iglesia con tecnología de excelencia para administrar los recursos del Reino con sabiduría, transparencia y visión de eternidad.
                     </p>
                 </div>
 
-                <div className="space-y-4">
-                    <h4 className="text-white font-bold">Producto</h4>
-                    <ul className="space-y-2 text-sm">
-                        <li><Link href="#funciones" className="hover:text-white transition">Funciones</Link></li>
-                        <li><Link href="#precios" className="hover:text-white transition">Precios</Link></li>
-                        <li><Link href="#testimonios" className="hover:text-white transition">Testimonios</Link></li>
-                        <li><Link href="/login" className="hover:text-white transition">Ingresar</Link></li>
-                        <li><Link href="/register" className="hover:text-white transition">Registrarse</Link></li>
+                <div className="space-y-6">
+                    <h4 className="text-white font-black uppercase tracking-[0.2em] text-[10px]">Producto</h4>
+                    <ul className="space-y-3 text-sm font-bold">
+                        <li><Link href="#funciones" className="hover:text-[#fbbf24] transition-colors uppercase tracking-widest text-[11px]">Funciones</Link></li>
+                        <li><Link href="#precios" className="hover:text-[#fbbf24] transition-colors uppercase tracking-widest text-[11px]">Precios</Link></li>
+                        <li><Link href="#testimonios" className="hover:text-[#fbbf24] transition-colors uppercase tracking-widest text-[11px]">Testimonios</Link></li>
+                        <li><Link href="/login" className="hover:text-[#fbbf24] transition-colors uppercase tracking-widest text-[11px]">Ingresar</Link></li>
                     </ul>
                 </div>
 
-                <div className="space-y-4">
-                    <h4 className="text-white font-bold">Legal</h4>
-                    <ul className="space-y-2 text-sm">
-                        <li><Link href="#" className="hover:text-white transition">Política de Privacidad</Link></li>
-                        <li><Link href="#" className="hover:text-white transition">Términos de Servicio</Link></li>
-                        <li><Link href="#" className="hover:text-white transition">Soporte</Link></li>
+                <div className="space-y-6">
+                    <h4 className="text-white font-black uppercase tracking-[0.2em] text-[10px]">Legal</h4>
+                    <ul className="space-y-3 text-sm font-bold">
+                        <li><Link href="#" className="hover:text-[#fbbf24] transition-colors uppercase tracking-widest text-[11px]">Privacidad</Link></li>
+                        <li><Link href="#" className="hover:text-[#fbbf24] transition-colors uppercase tracking-widest text-[11px]">Términos</Link></li>
+                        <li><Link href="#" className="hover:text-[#fbbf24] transition-colors uppercase tracking-widest text-[11px]">Soporte VIP</Link></li>
                     </ul>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-sm flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; {new Date().getFullYear()} Ecclesia SaaS. Todos los derechos reservados.</p>
-                <p className="mt-2 md:mt-0 text-slate-600">Hecho con fe y código.</p>
+            <div className="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center font-black tracking-widest text-[10px] uppercase text-slate-500">
+                <p>&copy; {new Date().getFullYear()} Ecclesia Platform. Excelencia Ministerial.</p>
+                <p className="mt-4 md:mt-0 text-[#fbbf24]/50 tracking-[0.3em]">Hecho con Pasión y Propósito</p>
             </div>
         </footer>
     );
